@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>第一章 阶级社会与国家</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="0.html"><strong aria-hidden="true">1.</strong> 封面</a></li><li class="chapter-item expanded "><a href="1.html" class="active"><strong aria-hidden="true">2.</strong> 第一章 阶级社会与国家</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="第一章-阶级社会与国家"><a class="header" href="#第一章-阶级社会与国家">第一章 阶级社会与国家</a></h1>
+<p><code>国家是阶级矛盾不可调和的产物</code>。马克思的学说在今天的遭遇，正如历史上被压迫阶级在解放斗争中的革命思想家和领袖的学说常有的遭遇一样。当伟大的革命家在世时，压迫阶级总是不断迫害他们，以最恶毒的敌意、最疯狂的仇恨、最放肆的造谣和诽谤对待他们的学说。在他们逝世以后，便试图把他们变为无害的神像，可以说是把他们偶像化，赋予他们的名字某种荣誉，以便“安慰”和愚弄被压迫阶级，同时却阉割革命学说的内容，磨去它的革命锋芒，把它庸俗化。现在资产阶级和工人运动中的机会主义者在对马克思主义作这种“加工”的事情上正一致起来。他们忘记、抹杀和歪曲这个学说的革命方面，革命灵魂。他们把资产阶级可以接受或者觉得资产阶级可以接受的东西放在第一位来加以颂扬。现在，一切社会沙文主义者都成了“马克思主义者”，这可不是说着玩的！那些德国的资产阶级学者，昨天还是剿灭马克思主义的专家，现在却愈来愈频繁地谈论起“德意志民族的”马克思来了，似乎马克思培育出了为进行掠夺战争而组织得非常出色的工人联合会！</p>
+<p>在这种情况下，在对马克思主义的种种歪曲空前流行的时候，我们的任务首先就是要恢复真正的马克思的国家学说。为此，必须大段大段地引证马克思和恩格斯本人的著作。当然，大段的引证会使文章冗长，并且丝毫无助于通俗化。但是没有这样的引证是绝对不行的。马克思和恩格斯著作中所有谈到国家问题的地方，至少一切有决定意义的地方，一定要尽可能完整地加以引证，使读者能够独立地了解科学社会主义创始人的全部观点以及这些观点的发展，同时也是为了确凿地证明并清楚地揭示现在占统治地位的“考茨基主义”对这些观点的歪曲。</p>
+<p>我们先从传播最广的弗·恩格斯的《家庭、私有制和国家的起源》一书讲起，这本书已于1894年在斯图加特出了第６版。我们必须根据德文原著来译出引文，因为俄文译本虽然很多，但多半不是译得不全，就是译得很糟。</p>
+<p>恩格斯在总结他所作的历史的分析时说：“国家决不是从外部强加于社会的一种力量。国家也不像黑格尔所断言的是‘伦理观念的现实’，‘理性的形象和现实’。确切的说，国家是社会在一定发展阶段上的产物；国家是表示：这个社会陷入了不可解决的自我矛盾，分裂为不可调和的对立面而又无力摆脱这些对立面。而为了使这些对立面，这些经济利益互相冲突的阶级，不致在无谓的斗争中把自己和社会消灭，就需要有一种表面上站在社会之上的力量来抑制冲突，把冲突保持在‘秩序’的范围以内；这种从社会中产生但又居于社会之上并且日益同社会相异化的力量，就是国家。”（德文第６版第177－178页）这一段话十分清楚地表达了马克思主义关于国家的历史作用和意义这一问题的基本思想。国家是阶级矛盾不可调和的产物和表现。在阶级矛盾客观上不能调和的地方、时候和条件下，便产生国家。反过来说，国家的存在证明阶级矛盾不可调和。</p>
+<p>对马克思主义的歪曲正是从这最重要的和根本的一点上开始的，这种歪曲来自两个主要方面。</p>
+<p>一方面，资产阶级的思想家，特别是小资产阶级的思想家──他们迫于无可辩驳的历史事实不得不承认，只有存在阶级矛盾和阶级斗争的地方才有国家──这样来“稍稍纠正”马克思，把国家说成是阶级调和的机关。在马克思看来，如果阶级调和是可能的话，国家既不会产生，也不会保持下去。而照市侩和庸人般的教授和政论家们说来（往往还善意地引用马克思的话作根据！），国家正是调和阶级的。在马克思看来，国家是阶级统治的机关，是一个阶级压迫另一个阶级的机关，是建立一种“秩序”来抑制阶级冲突，使这种压迫合法化、固定化。在小资产阶级政治家看来，秩序正是阶级调和，而不是一个阶级对另一个阶级的压迫；抑制冲突就是调和，而不是剥夺被压迫阶级用来推翻压迫者的一定的斗争手段和斗争方式。</p>
+<p>例如，在1917年革命中，当国家的意义和作用问题正好显得极为重要，即作为立刻行动而且是大规模行动的问题在实践上提出来的时候，全体社会革命党人和孟什维克一下子就完全滚到“国家”“调和”阶级这种小资产阶级理论方面去了。这两个政党的政治家写的无数决议和文章，都浸透了这种市侩的庸俗的“调和”论。至于国家是一定阶级的统治机关，这个阶级不可能与同它对立的一方（同它对抗的阶级）调和，这是小资产阶级民主派始终不能了解的。我国社会革命党人和孟什维克根本不是社会主义者（我们布尔什维克一直都在这样证明），而是唱着准社会主义的高调的小资产阶级民主派，他们对国家的态度就是最明显的表现之一。</p>
+<p>另一方面，“考茨基主义”对马克思主义的歪曲要巧妙得多。“在理论上”，它既不否认国家是阶级统治的机关，也不否认阶级矛盾不可调和。但是，它忽视或抹杀了以下一点：既然国家是阶级矛盾不可调和的产物，既然它是站在社会之上并且“日益同社会相异化”的力量，那么很明显，被压迫阶级要求得解放，不仅非进行暴力革命不可，而且非消灭统治阶级所建立的、体现这种“异化”的国家政权机构不可。这个在理论上不言而喻的结论，下面我们会看到，是马克思对革命的任务作了具体的历史的分析后十分明确地得出来的。正是这个结论被考茨基……“忘记”和歪曲了，这一点我们在下面的叙述中还要详细地证明。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="0.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="0.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
