@@ -3,3 +3,7 @@ authors = ["chalmery"]
 language = "en"
 multilingual = false
 src = "src"
+title = "国家与革命"
+
+[output.html]
+default-theme = 'rust'
